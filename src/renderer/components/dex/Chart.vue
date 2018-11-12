@@ -315,8 +315,8 @@ export default {
             this.$store.dispatch('fetchTradesBucketed', {
               marketName: this.$store.state.currentMarket.marketName,
               interval: resolutionInMinutes,
-              from: from, 
-              to: to,
+              from,
+              to,
               }).then(() => {
                 // Compute and fetch bars on newly populated apiBuckets
                 const bars = this.$store.state.tradeHistory && this.$store.state.tradeHistory.getBars ?
